@@ -13,6 +13,7 @@ script:
   - pylint codegolf || true
 
 notifications:
+  email: false
   slack:
     rooms:
       - uqcs:V9gB7LhPmGARkyQZOpGEHza7#codegolf
