@@ -6,5 +6,8 @@ Markdown
 # Testing
 pytest
 
+# Documentation
+Sphinx
+
 # SQLAlchemy
 Flask-SQLAlchemy
