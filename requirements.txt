@@ -1,0 +1,10 @@
+# Core
+Flask
+Jinja2
+Markdown
+
+# Testing
+pytest
+
+# SQLAlchemy
+Flask-SQLAlchemy
