@@ -6,7 +6,7 @@ python:
   - "3.5"
 
 install:
-  - apt-get install pylint
+  - sudo apt-get install pylint
   - pip install -r requirements.txt
 
 script:
