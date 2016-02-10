@@ -5,6 +5,7 @@ Markdown
 
 # Testing
 pytest
+pylint
 
 # Documentation
 Sphinx
