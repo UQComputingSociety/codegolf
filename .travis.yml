@@ -11,3 +11,8 @@ install:
 script:
   - py.test
   - pylint codegolf || true
+
+notifications:
+  slack:
+    rooms:
+      - uqcs:V9gB7LhPmGARkyQZOpGEHza7#codegolf
