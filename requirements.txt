@@ -11,4 +11,4 @@ pylint
 Sphinx
 
 # SQLAlchemy
-Flask-SQLAlchemy
+sqlalchemy
