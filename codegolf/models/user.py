@@ -22,7 +22,7 @@ class User(Base):
         self.email = email
 
     def __repr__(self):
-        return '<User %r>' % (self.name)
+        return '<User %r>' % self.name
 
 
 class Admin(Base):
