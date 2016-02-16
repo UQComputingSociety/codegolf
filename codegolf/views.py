@@ -1,8 +1,8 @@
 import flask
 
-from codegolf import app
-from codegolf.database import db_session
-from codegolf.models import User
+from . import app
+from .database import db_session
+from .models import User
 
 
 @app.route('/')

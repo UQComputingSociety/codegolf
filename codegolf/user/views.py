@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template
+from ..database import db_session
+from ..models import Submission
 
 user = Blueprint('user', __name__, url_prefix='/user')
 

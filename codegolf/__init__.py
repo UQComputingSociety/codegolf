@@ -14,4 +14,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///codegolf.db'
 for blueprint in BLUEPRINTS:
     app.register_blueprint(blueprint)
 
-from codegolf import views
+from . import views
