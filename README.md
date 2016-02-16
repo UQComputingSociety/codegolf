@@ -29,4 +29,5 @@ you have a latex distribution installed.
 
 ## Running Server
 
+`python3 createDB.py`
 `python3 runserver.py`
