@@ -17,6 +17,13 @@ class User(Base):
         "polymorphic_identity": "User",
     }
 
+    def __init__(self, name=None, email=None):
+        self.name = name
+        self.email = email
+
+    def __repr__(self):
+        return '<User %r>' % (self.name)
+
 
 class Admin(Base):
     id = sa.Column(sa.Integer, sa.ForeignKey(User.id), primary_key=True)
