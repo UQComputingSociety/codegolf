@@ -9,6 +9,7 @@ install:
   - pip install -r requirements.txt
 
 script:
+  - python createDB.py
   - py.test
   - pylint codegolf || true
 
