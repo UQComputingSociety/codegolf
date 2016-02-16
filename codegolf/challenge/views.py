@@ -1,5 +1,8 @@
+"""
+Views for the Challenge model.
+"""
 from flask import Blueprint, render_template
-from ..models import Challenge
+from codegolf.models import challenge as m_challenge
 
 challenge = Blueprint('challenge', __name__, url_prefix='/challenge')
 

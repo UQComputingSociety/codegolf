@@ -1,5 +1,8 @@
+"""
+Views for the Submission model.
+"""
 from flask import Blueprint, render_template
-from ..models import Submission
+from codegolf.models import submission as m_submission
 
 submission = Blueprint('submission', __name__, url_prefix='/submission')
 

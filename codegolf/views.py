@@ -1,3 +1,6 @@
+"""
+Main entry point views.
+"""
 import flask
 
 from . import app

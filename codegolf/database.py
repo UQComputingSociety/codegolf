@@ -1,3 +1,6 @@
+"""
+Database Controller and initaliser.
+"""
 import sqlalchemy as sa
 import sqlalchemy.orm as sao
 from . import app

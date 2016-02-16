@@ -1,5 +1,8 @@
+"""
+Views for the User model.
+"""
 from flask import Blueprint, render_template
-from ..models import Submission
+from codegolf.models import user as m_user
 
 user = Blueprint('user', __name__, url_prefix='/user')
 
