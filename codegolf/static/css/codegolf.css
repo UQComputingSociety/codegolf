@@ -36,6 +36,9 @@ html, body {
 #large-menu a:hover {
     color: #20252b;
 }
+#account-btns {
+    height: 40px;
+}
 
 /* Footer */
 #footer {
@@ -47,6 +50,7 @@ html, body {
 }
 
 .footer-link-head {
+    padding-top: 18px;
     color: #c8c8c8;
     text-decoration: underline;
 }
@@ -99,3 +103,37 @@ html, body {
 
 /* Home page specific */
 
+#info {
+    min-height: 200px;
+    background-color: #e8e8e8;
+    padding-top: 30px;
+}
+
+#challenge-wrap {
+    background-color: #f58312;
+    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.75);
+    padding: 20px 0;
+}
+
+#challenge {
+    background-color: #ffffff;
+    border: solid black 2px;
+}
+
+#leader-board {
+    min-height: 400px;
+    background-color: #1e44a2;
+    box-shadow: inset 0px 0px 33px 2px rgba(0,0,0,0.75);
+}
+
+#getting-started {
+    min-height: 200px;
+    background-color: #e8e8e8;
+}
+
+#contribute {
+    min-height: 25px;
+    padding: 10px 10px;
+    background-color: #3E4349;
+    color: #ffffff;
+}
