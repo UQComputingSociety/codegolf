@@ -10,7 +10,7 @@ from .models import User
 
 @app.route('/')
 def index():
-    return flask.render_template('layout.html')
+    return flask.render_template('home.html')
 
 
 @app.route('/addBob')

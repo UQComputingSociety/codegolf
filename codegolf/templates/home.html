@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/codegolf.css') }}" />
+{% endblock %}
+{% block body %}
+  <div id="info" class="column small-12">
+    something here with a logo
+  </div>
+  <div id="challenge" class="column small-12">
+    This Weeks Challenge
+  </div>
+  <div id="leader-board" class="column small-12">
+    Leader Board
+  </div>
+  <div id="getting-started" class="column small-12">
+    Getting Started
+  </div>
+{% endblock %}

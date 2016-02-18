@@ -7,6 +7,11 @@ html, body {
     min-height: 100%;
 }
 
+#content {
+    padding-bottom: 200px;
+}
+
+/* header */
 #header {
     padding-top: 2px;
     padding-right: 2px;
@@ -15,8 +20,21 @@ html, body {
     line-height: 38px;
 }
 
-#content {
-    padding-bottom: 200px;
+#project-name a{
+    color: #000000;
+}
+
+#project-name a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+#large-menu, #large-menu a {
+    color: #989898;
+}
+
+#large-menu a:hover {
+    color: #20252b;
 }
 
 /* Footer */
@@ -34,7 +52,7 @@ html, body {
 }
 
 .light-link {
-    color: #e1faea;
+    color: #cbcbcb;
 }
 
 .light-link:hover {
@@ -73,5 +91,11 @@ html, body {
 
 /* Helper Classes */
 .code {
-    font-family: 'Source Code Pro';
+    font-family: 'Source Code Pro', sans-serif;
 }
+
+/* ******************************************** */
+/* ******************************************** */
+
+/* Home page specific */
+
