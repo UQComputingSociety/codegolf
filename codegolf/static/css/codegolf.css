@@ -1,0 +1,67 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#header {
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 38px;
+}
+
+#content {
+    padding-bottom: 200px;
+}
+
+/* Footer */
+#footer {
+    margin-top: -200px;
+    height: 200px;
+    clear: both;
+    background-color: #2b2b2b;
+}
+
+.footer-link-head {
+    color: #c8c8c8
+}
+
+
+/* Socials */
+.slack {
+    background-color: #9361c8;
+}
+.facebook {
+    background-color: #2D4373;
+}
+.github {
+    background-color: #999999;
+}
+.google {
+    background-color: #D50F25;
+}
+.twitter {
+    background-color: #55ACEE;
+}
+
+.social {
+    width: 125px;
+    height: 25px;
+    padding: 5px 0;
+    margin: 2px 0;
+    text-align: left;
+    padding-left: 10px;
+}
+.social:hover {
+    background-color: #3c3c3c;
+}
+
+/* Helper Classes */
+.code {
+    font-family: 'Source Code Pro';
+}

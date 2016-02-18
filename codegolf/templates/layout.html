@@ -1,8 +1,90 @@
 <!DOCTYPE html>
-<title>UQCS Code Golf Website</title>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-<div class="page">
-    <h1>UQCS Code Golf Website</h1>
-    {% block body %}{% endblock %}
-</div>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%  block title %} UQCS - CodeGolf {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/codegolf.css') }}" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <div id="project-name" class="float-left code">
+          UQ Computer Society - CodeGolf
+        </div>
+        <div id="account-btns" class="float-right">
+          {% if account_name %}
+            <a class="hollow button small" href="#">{{ account_name }}</a>
+          {% else %}
+            <a class="hollow button small" href="#">Login</a>
+            <a class="hollow button small" href="#">Signup</a>
+          {% endif %}
+        </div>
+      </div>
+      <div id="content">
+      {% block body %}
+        #body content here
+      {% endblock %}
+      </div>
+    </div>
+    <div id="footer">
+      <div class="column small-4">
+        <ul class="no-bullet">
+          <li class="footer-link-head">UQCS</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/join">Join</a></li>
+        </ul>
+      </div>
+      <div class="column small-4">
+        <ul class="no-bullet">
+          <li class="footer-link-head">CodeGolf</li>
+          <li><a href="/">CodeGolf</a></li>
+          <li><a href="/signup">Signup</a></li>
+          <li><a href="/challenges">challenges</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contribute">Contribute</a></li>
+          <li><a href="/docs">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="column small-4">
+        <ul class="no-bullet">
+          <li>
+            <a href="/" class="button social slack">
+              <i class="fa fa-slack"></i> Slack
+            </a>
+          </li>
+          <li>
+            <a href="/" class="button social facebook">
+              <i class="fa fa-facebook-official"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="/" class="button social github">
+              <i class="fa fa-github"></i> Github
+            </a>
+          </li>
+          <li>
+            <a href="/" class="button social google">
+              <i class="fa fa-google-plus"></i> Google+
+            </a>
+          </li>
+          <li>
+            <a href="/" class="button social twitter">
+              <i class="fa fa-twitter"></i> Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/vendor/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/what-input.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/codegolf.js') }}"></script>
+  </body>
+</html>
