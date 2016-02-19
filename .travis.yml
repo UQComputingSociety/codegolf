@@ -18,3 +18,8 @@ notifications:
   slack:
     rooms:
       - uqcs:V9gB7LhPmGARkyQZOpGEHza7#codegolf
+  webhooks:
+    urls:
+      - hooks.uqcs.org.au/codegolf
+    on_failure: never
+    on_start: never
