@@ -15,21 +15,20 @@
     <div id="container">
       <div id="header">
         <div id="project-name" class="float-left code">
-          <a href="/">UQCS - CodeGolf</a>
+          <a href="{{ url_for('index') }}">UQCS - CodeGolf</a>
         </div>
         <div id="large-menu" class="float-left show-for-medium code">
           &nbsp;
-          / <a href="/">About</a>
-          / <a href="/">Challenges</a>
-          / <a href="/">Contrib</a>
-          / <a href="/">Scores</a>
+          / <a href="{{ url_for('about') }}">About</a>
+          / <a href="{{ url_for('challenge.index') }}">Challenges</a>
+          / <a href="{{ url_for('contribute') }}">Contrib</a>
+          / <a href="{{ url_for('scores') }}">Scores</a>
         </div>
         <div id="account-btns" class="float-right">
           {% if account_name %}
             <a class="hollow button small" href="#">{{ account_name }}</a>
           {% else %}
-            <a class="hollow button small" href="#">Login</a>
-            <a class="hollow button small" href="#">Signup</a>
+            <a class="hollow button small" href="{{ url_for('user.login') }}">Login / Signup</a>
           {% endif %}
         </div>
       </div>
@@ -43,46 +42,46 @@
       <div class="column small-4">
         <ul class="no-bullet float-center" style="width: 100px;">
           <li class="footer-link-head">UQCS</li>
-          <li><a href="/" class="light-link">Home</a></li>
-          <li><a href="/about" class="light-link">About</a></li>
-          <li><a href="/contact" class="light-link">Contact</a></li>
-          <li><a href="/join" class="light-link">Join</a></li>
+          <li><a href="https://uqcs.org.au/" class="light-link">Home</a></li>
+          <li><a href="https://uqcs.org.au/about" class="light-link">About</a></li>
+          <li><a href="https://uqcs.org.au/contact" class="light-link">Contact</a></li>
+          <li><a href="https://uqcs.org.au/join" class="light-link">Join</a></li>
         </ul>
       </div>
       <div class="column small-4">
         <ul class="no-bullet float-center" style="width: 100px;">
           <li class="footer-link-head">CodeGolf</li>
-          <li><a href="/" class="light-link">Home</a></li>
-          <li><a href="/signup" class="light-link">Signup</a></li>
-          <li><a href="/about" class="light-link">About</a></li>
-          <li><a href="/challenges" class="light-link">Challenges</a></li>
-          <li><a href="/contribute" class="light-link">Contribute</a></li>
+          <li><a href="{{ url_for('index') }}" class="light-link">Home</a></li>
+          <li><a href="{{ url_for('user.login') }}" class="light-link">Login</a></li>
+          <li><a href="{{ url_for('about') }}" class="light-link">About</a></li>
+          <li><a href="{{ url_for('challenge.index') }}" class="light-link">Challenges</a></li>
+          <li><a href="{{ url_for('contribute') }}" class="light-link">Contribute</a></li>
         </ul>
       </div>
       <div class="column small-4">
         <ul class="no-bullet float-center" style="width: 125px; padding-top: 20px;">
           <li>
-            <a href="/" class="button social slack">
+            <a href="https://slack.uqcs.org.au/" class="button social slack">
               <i class="fa fa-slack"></i> Slack
             </a>
           </li>
           <li>
-            <a href="/" class="button social facebook">
+            <a href="https://www.facebook.com/uqcomputing" class="button social facebook">
               <i class="fa fa-facebook-official"></i> Facebook
             </a>
           </li>
           <li>
-            <a href="/" class="button social github">
+            <a href="https://github.com/UQComputingSociety/" class="button social github">
               <i class="fa fa-github"></i> Github
             </a>
           </li>
           <li>
-            <a href="/" class="button social google">
+            <a href="https://google.com/profiles/uqcomputing" class="button social google">
               <i class="fa fa-google-plus"></i> Google+
             </a>
           </li>
           <li>
-            <a href="/" class="button social twitter">
+            <a href="https://twitter.com/UQComputing" class="button social twitter">
               <i class="fa fa-twitter"></i> Twitter
             </a>
           </li>

@@ -27,6 +27,6 @@ def account():
     return render_template('layout.html')
 
 
-@user.route('/register')
-def register():
-    return render_template('layout.html')
+@user.route('/login')
+def login():
+    return render_template('user/login.html')

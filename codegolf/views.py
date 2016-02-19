@@ -13,6 +13,21 @@ def index():
     return flask.render_template('home.html')
 
 
+@app.route('/about')
+def about():
+    return flask.render_template('about.html')
+
+
+@app.route('/contribute')
+def contribute():
+    return flask.render_template('contribute.html')
+
+
+@app.route('/scores')
+def scores():
+    return flask.render_template('layout.html')
+
+
 @app.route('/addBob')
 def test_db_with_bob():
     u = User("Bobby", "bob@example.com")
