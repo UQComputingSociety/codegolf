@@ -1,7 +1,9 @@
 UQCS CodeGolf Website
 =====================
 
-![travis build status](https://travis-ci.org/UQComputingSociety/codegolf.svg?branch=master)
+Linux: ![travis build status](https://travis-ci.org/UQComputingSociety/codegolf.svg?branch=master)
+
+Windows: ![appveyor-build-status](https://ci.appveyor.com/api/projects/status/github/UQComputingSociety/codegolf?branch=master&svg=true)
 
 This is a repository for the website for the codegolf puzzles at UQCS.
 
