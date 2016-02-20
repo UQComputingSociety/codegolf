@@ -17,10 +17,6 @@ environment:
       PYTHON_ARCH: "64"
 
 install:
-  # Install Python (from the official .msi of http://python.org) and pip when
-  # not already installed.
-#  - ps: if (-not(Test-Path($env:PYTHON))) { & appveyor\install.ps1 }
-
   # Prepend newly installed Python to the PATH of this build (this cannot be
   # done from inside the powershell script as it would require to restart
   # the parent CMD process).
@@ -30,9 +26,9 @@ install:
   - "python --version"
   - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
 
-  # Upgrade to the latest version of pip to avoid it displaying warnings
-  # about it being out of date.
-#  - "pip install --disable-pip-version-check --user --upgrade pip"
+   Upgrade to the latest version of pip to avoid it displaying warnings
+   about it being out of date.
+  - "pip install --disable-pip-version-check --user --upgrade pip"
 
   # Install the build dependencies of the project. If some dependencies contain
   # compiled extensions and are not provided as pre-built wheel packages,
