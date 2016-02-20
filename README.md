@@ -8,6 +8,16 @@ This is a repository for the website for the codegolf puzzles at UQCS.
 ## Requirements
 
 * Python 3.4.0+
+    * Virtualenv
+    * Flask
+    * Jinja2
+    * Markdown
+    * pytest
+    * pylint
+    * Sphinx
+    * sqlalchemy
+
+* SQLLite
 
 ## Developement Guide
 
@@ -20,7 +30,13 @@ Following ports have been forwarded for access in the hosts webbrowser: (tcp: 50
 
 ### Manual Setup
 
-...
+#### Windows (with Cygwin)
+
+0. Install python 3.4+ and navigate to project directory
+1. `pip3 install virtualenv`
+2. `source venv/Scripts/activate`
+3. `pip3 install -r requirements.txt`
+4. Start with `python3 runserver.py`
 
 ## Building Docs
 
