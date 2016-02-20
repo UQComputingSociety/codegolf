@@ -41,3 +41,11 @@ build: off
 test_script:
   # Run the project tests
   - "%CMD_IN_ENV% python tests\\test_codegolf.py"
+
+notifications:
+- provider: Slack
+  incoming_webhook: http://hooks.uqcs.org.au/codegolf
+  channel: '#codegolf'
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: false
