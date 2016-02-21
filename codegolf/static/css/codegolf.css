@@ -24,11 +24,11 @@ body, h1, h2, h3, h4, h5, h6 {
     line-height: 38px;
 }
 
-#project-name a{
+#project-name a {
     color: #000000;
 }
 
-#project-name a:hover{
+#project-name a:hover {
     color: #000000;
     text-decoration: underline;
 }
@@ -127,35 +127,36 @@ body, h1, h2, h3, h4, h5, h6 {
 
 #info {
     min-height: 200px;
-    background-color: #e8e8e8;
+    background-color: #fefefe;
     padding-top: 30px;
 }
 
 #challenge-wrap {
     background-color: #f58312;
-    /*box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.75);*/
+    background-image: linear-gradient(to left top, #03888D 0%, #3898DD 100%);
     padding: 20px 0;
 }
 
 #challenge {
-    background-color: #ffffff;
+    background-color: #fefefe;
     border: solid black 2px;
 }
 
 #leader-board {
     min-height: 400px;
+    color: #fefefe;
     background-color: #1e44a2;
-    /*box-shadow: inset 0px 0px 33px 2px rgba(0,0,0,0.75);*/
+    background-image: linear-gradient(to right bottom, #03888D 0%, #187795 100%);
 }
 
 #getting-started {
     min-height: 200px;
-    background-color: #e8e8e8;
+    background-color: #fefefe;
 }
 
 #contribute {
     min-height: 25px;
     padding: 10px 10px;
     background-color: #3E4349;
-    color: #ffffff;
+    color: #fefefe;
 }
