@@ -16,13 +16,15 @@
       <div id="header">
         <div id="project-name" class="float-left code">
           <a href="{{ url_for('index') }}">UQCS - CodeGolf</a>
+          /
         </div>
         <div id="large-menu" class="float-left show-for-medium code">
           &nbsp;
-          / <a href="{{ url_for('about') }}">About</a>
-          / <a href="{{ url_for('challenge.index') }}">Challenges</a>
-          / <a href="{{ url_for('contribute') }}">Contrib</a>
-          / <a href="{{ url_for('scores') }}">Scores</a>
+          <a {%if request.endpoint == "index"%} class="active" {%endif%} href="{{ url_for('index') }}">Home</a>
+          | <a {%if request.endpoint == "about"%} class="active" {%endif%} href="{{ url_for('about') }}">About</a>
+          | <a {%if request.endpoint == "challenge.index"%} class="active" {%endif%} href="{{ url_for('challenge.index') }}">Challenges</a>
+          | <a {%if request.endpoint == "contribute"%} class="active" {%endif%} href="{{ url_for('contribute') }}">Contrib</a>
+          | <a {%if request.endpoint == "scores"%} class="active" {%endif%} href="{{ url_for('scores') }}">Scores</a>
         </div>
         <div id="account-btns" class="float-right">
           {% if account_name %}
