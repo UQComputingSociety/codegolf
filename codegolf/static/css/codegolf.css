@@ -102,6 +102,19 @@ body, h1, h2, h3, h4, h5, h6 {
     background-color: #3c3c3c;
 }
 
+.big-social {
+    width: 200px;
+    height: 50px;
+    padding: 5px 0;
+    margin: 2px 0;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 2rem;
+}
+.big-social:hover {
+    background-color: #3c3c3c;
+}
+
 /* Helper Classes */
 .code {
     font-family: 'Source Code Pro', sans-serif;
