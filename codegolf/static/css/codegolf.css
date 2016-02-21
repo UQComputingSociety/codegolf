@@ -3,6 +3,10 @@ html, body {
     width: 100%;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Helvetica, Verdana, sans-serif;
+}
+
 #container {
     min-height: 100%;
 }
@@ -111,7 +115,7 @@ html, body {
 
 #challenge-wrap {
     background-color: #f58312;
-    box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.75);
+    /*box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.75);*/
     padding: 20px 0;
 }
 
@@ -123,7 +127,7 @@ html, body {
 #leader-board {
     min-height: 400px;
     background-color: #1e44a2;
-    box-shadow: inset 0px 0px 33px 2px rgba(0,0,0,0.75);
+    /*box-shadow: inset 0px 0px 33px 2px rgba(0,0,0,0.75);*/
 }
 
 #getting-started {
