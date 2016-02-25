@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{%  block title %} UQCS - CodeGolf {% endblock %}</title>
+    <title>{%  block title %} {⛳} UQCS - CodeGolf {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.min.css') }}" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/codegolf.css') }}" />
     {% block css %}{% endblock %}
@@ -15,14 +15,16 @@
     <div id="container">
       <div id="header">
         <div id="project-name" class="float-left code">
-          <a href="{{ url_for('index') }}">UQCS - CodeGolf</a>
+          <a href="{{ url_for('index') }}"> {⛳} UQCS - CodeGolf</a>
+          /
         </div>
         <div id="large-menu" class="float-left show-for-medium code">
           &nbsp;
-          / <a href="{{ url_for('about') }}">About</a>
-          / <a href="{{ url_for('challenge.index') }}">Challenges</a>
-          / <a href="{{ url_for('contribute') }}">Contrib</a>
-          / <a href="{{ url_for('scores') }}">Scores</a>
+          <a {%if request.endpoint == "index"%} class="active" {%endif%} href="{{ url_for('index') }}">Home</a>
+          | <a {%if request.endpoint == "about"%} class="active" {%endif%} href="{{ url_for('about') }}">About</a>
+          | <a {%if request.endpoint == "challenge.index"%} class="active" {%endif%} href="{{ url_for('challenge.index') }}">Challenges</a>
+          | <a {%if request.endpoint == "contribute"%} class="active" {%endif%} href="{{ url_for('contribute') }}">Contribute</a>
+          | <a {%if request.endpoint == "scores"%} class="active" {%endif%} href="{{ url_for('scores') }}">Scores</a>
         </div>
         <div id="account-btns" class="float-right">
           {% if account_name %}
@@ -76,7 +78,7 @@
             </a>
           </li>
           <li>
-            <a href="https://google.com/profiles/uqcomputing" class="button social google">
+            <a href="https://plus.google.com/116973751891375621428" class="button social google">
               <i class="fa fa-google-plus"></i> Google+
             </a>
           </li>
@@ -88,10 +90,5 @@
         </ul>
       </div>
     </div>
-    <script src="{{ url_for('static', filename='js/vendor/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/vendor/what-input.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/codegolf.js') }}"></script>
-    {% block scripts %}{% endblock %}
   </body>
 </html>
