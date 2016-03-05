@@ -1,5 +1,7 @@
 # Core
 Flask
+Flask-OAuthlib
+Flask-Login
 Jinja2
 Markdown
 

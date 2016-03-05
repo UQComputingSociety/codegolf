@@ -12,6 +12,8 @@ This is a repository for the website for the codegolf puzzles at UQCS.
 * Python 3.4.0+
     * Virtualenv
     * Flask
+    * Flask-OAuthlib
+    * Flask-Login
     * Jinja2
     * Markdown
     * pytest
@@ -20,6 +22,8 @@ This is a repository for the website for the codegolf puzzles at UQCS.
     * sqlalchemy
 
 * SQLLite
+
+* Config file with Github OAuth key/secret. Ask #codegolf on UQCS slack to get this
 
 ## Developement Guide
 
