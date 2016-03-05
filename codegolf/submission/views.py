@@ -2,7 +2,8 @@
 Views for the Submission model.
 """
 from flask import Blueprint, render_template
-from codegolf.models import submission as m_submission
+from flask_login import login_required
+from codegolf.models import Submission
 
 submission = Blueprint('submission', __name__, url_prefix='/submission')
 
@@ -18,15 +19,18 @@ def details():
 
 
 @submission.route('/delete')
+@login_required
 def delete():
     return render_template('layout.html')
 
 
 @submission.route('/edit')
+@login_required
 def edit():
     return render_template('layout.html')
 
 
 @submission.route('/create')
+@login_required
 def create():
     return render_template('layout.html')

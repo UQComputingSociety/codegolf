@@ -2,7 +2,8 @@
 Views for the Challenge model.
 """
 from flask import Blueprint, render_template
-from codegolf.models import challenge as m_challenge
+from flask_login import login_required
+from codegolf.models import Challenge
 
 challenge = Blueprint('challenge', __name__, url_prefix='/challenge')
 
@@ -18,15 +19,18 @@ def details():
 
 
 @challenge.route('/delete')
+@login_required
 def delete():
     return render_template('layout.html')
 
 
 @challenge.route('/edit')
+@login_required
 def edit():
     return render_template('layout.html')
 
 
 @challenge.route('/create')
+@login_required
 def create():
     return render_template('layout.html')
