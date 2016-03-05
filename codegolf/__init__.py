@@ -1,9 +1,12 @@
+import os
 from flask import Flask
 from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///codegolf.db'
-app.config.from_envvar('CODEGOLF_SETTINGS')
+app.config['GITHUB_CONSUMER_KEY'] = os.environ['CODEGOLF_GITHUB_CONSUMER_KEY']
+app.config['GITHUB_CONSUMER_SECRET'] = os.environ['CODEGOLF_GITHUB_CONSUMER_SECRET']
+app.config['SECRET_KEY'] = os.environ['CODEGOLF_SECRET_KEY']
 
 login_manager = LoginManager()
 login_manager.init_app(app)

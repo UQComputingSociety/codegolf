@@ -23,7 +23,7 @@ This is a repository for the website for the codegolf puzzles at UQCS.
 
 * SQLLite
 
-* Config file with Github OAuth key/secret. Ask #codegolf on UQCS slack to get this
+* The three environment variables from the codegolf channel in slack. Ask someone for them.
 
 ## Developement Guide
 

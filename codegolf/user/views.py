@@ -39,7 +39,6 @@ def delete():
 @user.route('/account')
 @login_required
 def account():
-    print(current_user.name)
     return render_template('layout.html')
 
 
