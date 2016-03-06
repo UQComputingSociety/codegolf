@@ -27,8 +27,8 @@
           | <a {%if request.endpoint == "scores"%} class="active" {%endif%} href="{{ url_for('scores') }}">Scores</a>
         </div>
         <div id="account-btns" class="float-right">
-          {% if account_name %}
-            <a class="hollow button small" href="#">{{ account_name }}</a>
+          {% if current_user.is_authenticated %}
+            <a class="hollow button small" href="{{  url_for('user.account') }}">{{ current_user.name }}</a>
           {% else %}
             <a class="hollow button small" href="{{ url_for('user.login') }}">Login / Signup</a>
           {% endif %}
