@@ -25,7 +25,7 @@ def contribute():
 
 @app.route('/scores')
 def scores():
-    return flask.render_template('layout.html')
+    return flask.render_template('scores.html')
 
 
 @app.route('/addBob')

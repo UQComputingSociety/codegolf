@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block css %}
+{% endblock %}
+{% block body %}
+  <div class="row">
+    <div class="column small-12">
+      <div class="column small-centered small-10 large-8 text-center">
+        <h2>{⛳} Scores</h2>
+      </div>
+    </div>
+    <div class="column small-12 medium-6 medium-offset-3 end">
+      {% if current_user.is_authenticated %}
+        Your Score <br>
+        <table class="full-width">
+          <tr>
+            <td>Rank</td>
+            <td>Name</td>
+            <td>Score</td>
+          </tr>
+          <tr>
+            <td>#</td>
+            <td>{{ current_user.name }}</td>
+            <td>#</td>
+          </tr>
+        </table>
+      {% endif %}
+      <br>
+      <table class="full-width">
+        <tr>
+          <td>Rank</td>
+          <td>Name</td>
+          <td>Score</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>kjfhksdhfk</td>
+          <td>9001</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>hjskdfjhksdjhf</td>
+          <td>8999</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+{% endblock %}
