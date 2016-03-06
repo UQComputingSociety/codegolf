@@ -52,4 +52,22 @@ you have a latex distribution installed.
 ## Running Server
 
 `python3 createDB.py`
+
 `python3 runserver.py`
+
+
+## Github Authorisation
+
+Hello there local developer, wondering why you cant login? well head over to the developer section on 
+github and go create a developer key. An example of what to register is listed below.
+
+Application name: codegolf local
+Homepage URL: http://localhost:9000
+Application Description: ""
+Authorization callback URL: http://localhost:9000/user/authorize
+
+Its then the devs reponsability to setup these enviroment variables
+
+* 'CODEGOLF_GITHUB_CONSUMER_KEY' which is the github client id
+* 'CODEGOLF_GITHUB_CONSUMER_SECRET' which is the github client secret
+* 'CODEGOLF_SECRET_KEY' which is a random selection of characters
