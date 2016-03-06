@@ -21,24 +21,17 @@ def user_loader(user_id):
 
 
 @user.route('/')
-def index():
-    return render_template('layout.html')
-
-
-@user.route('/details')
-def details():
-    return render_template('layout.html')
+@user.route('/account')
+@login_required
+def account():
+    return render_template('user/account.html')
 
 
 @user.route('/delete')
 @login_required
 def delete():
-    return render_template('layout.html')
-
-
-@user.route('/account')
-@login_required
-def account():
+    #todo(...): user become annon as how the system calculates the data must remain
+    #           just not owned by any one.
     return render_template('layout.html')
 
 

@@ -1,0 +1,12 @@
+.account-btn {
+    width: 150px;
+    text-align: center;
+}
+
+.btn-warning {
+    background-color: red;
+}
+
+.btn-warning:hover {
+    background-color: darkred;
+}
