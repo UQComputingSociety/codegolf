@@ -47,6 +47,7 @@ body, h1, h2, h3, h4, h5, h6 {
 
 #account-btns {
     height: 40px;
+    padding-right: 5px;
 }
 
 /* Footer */
@@ -118,6 +119,11 @@ body, h1, h2, h3, h4, h5, h6 {
 /* Helper Classes */
 .code {
     font-family: 'Source Code Pro', sans-serif;
+}
+
+.title-button {
+    text-align: center;
+    width: 100%;
 }
 
 /* ******************************************** */
