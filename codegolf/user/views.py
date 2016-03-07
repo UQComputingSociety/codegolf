@@ -38,7 +38,8 @@ def delete():
 @user.route('/login')
 def login():
     callback_url = url_for('user.authorize', _external=True)
-    return git_auth.authorize(callback=callback_url)
+    #return git_auth.authorize(callback=callback_url)
+    return git_auth.authorize(callback='https://codegolf.uqcs.org.au/user/authorize')
 
 
 @user.route("/logout")
