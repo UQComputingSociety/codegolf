@@ -1,13 +1,14 @@
 """
 Views for the User model.
 """
+import functools
 from flask import Blueprint, render_template, url_for, redirect
 from flask_oauthlib.client import OAuth
 from flask_oauthlib.contrib.apps import github
 from flask_login import login_required, current_user, login_user, logout_user
 from codegolf import login_manager, app
 from codegolf.database import db_session
-from codegolf.models import User
+from codegolf.models import User, Admin
 
 user = Blueprint('user', __name__, url_prefix='/user')
 
@@ -18,6 +19,19 @@ git_auth = github.register_to(oauth)
 @login_manager.user_loader
 def user_loader(user_id):
     return db_session.query(User).filter(User.id == user_id).one()
+
+
+def admin_required(f):
+    """
+    A decorator similar to login_required requiring an admin user
+    :param f: view to be made admin only
+    """
+    @functools.wraps(f)
+    def wrapper(*a, **kw):
+        if db_session.query(Admin).filter(Admin.id == current_user.id).first() is None:
+            return redirect(url_for('index'))
+        return f(*a, **kw)
+    return wrapper
 
 
 @user.route('/')
@@ -31,7 +45,7 @@ def account():
 
 
 @user.route('/delete')
-@login_required
+@admin_required
 def delete():
     """
     Admin only page to delete a user (for example troll account). Option to also delete all the users submissions or to

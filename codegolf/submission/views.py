@@ -4,6 +4,7 @@ Views for the Submission model.
 from flask import Blueprint, render_template
 from flask_login import login_required
 from codegolf.models import Submission
+from codegolf.user.views import admin_required
 
 submission = Blueprint('submission', __name__, url_prefix='/submission')
 
@@ -27,7 +28,7 @@ def details():
 
 
 @submission.route('/delete')
-@login_required
+@admin_required
 def delete():
     """
     Admin only page to delete a particular submission

@@ -4,6 +4,7 @@ Views for the Challenge model.
 from flask import Blueprint, render_template
 from flask_login import login_required
 from codegolf.models import Challenge
+from codegolf.user.views import admin_required
 
 challenge = Blueprint('challenge', __name__, url_prefix='/challenge')
 
@@ -29,7 +30,7 @@ def details():
 
 
 @challenge.route('/delete')
-@login_required
+@admin_required
 def delete():
     """
     Admin only page for deleting a challenge.
@@ -38,7 +39,7 @@ def delete():
 
 
 @challenge.route('/edit')
-@login_required
+@admin_required
 def edit():
     """
     Admin only page to edit a challenge (such as change the description). If a non-admin views this page, it should be a
@@ -48,7 +49,7 @@ def edit():
 
 
 @challenge.route('/create')
-@login_required
+@admin_required
 def create():
     """
     Admin only page to create a challenge. If a non-admin views this page, there is a form to suggest new challenges.
