@@ -8,34 +8,48 @@ from codegolf.models import Submission
 submission = Blueprint('submission', __name__, url_prefix='/submission')
 
 
-# Lists all submissions for your account
 @submission.route('/')
 def index():
+    """
+    List all submissions for your account.
+    """
     return render_template('layout.html')
 
 
-# allows you to view and individual submission /details?sub_id=2030230938
 @submission.route('/details')
 def details():
+    """
+    View the details for a particular submission including source code, character count, and submitter. If the challenge
+    has not completed yet, this only shows the character count and language with the actual code and the submitter
+    unknown.
+    """
     return render_template('layout.html')
 
 
-# allows you to delete a submission if your the owner /delete?sub_id=skdhfkjdshfkjd
 @submission.route('/delete')
 @login_required
 def delete():
+    """
+    Admin only page to delete a particular submission
+    """
     return render_template('layout.html')
 
 
-# allows you to edit a submission if your the owner /edit?sub_id=934798347
 @submission.route('/edit')
 @login_required
 def edit():
+    """
+    Page that let's you update a particular submission if you are logged in as the same account that submitted the
+    solution.
+    """
     return render_template('layout.html')
 
 
-# allows you to create a submission for a challenge /create?challenge_id=9020934809843
-@submission.route('/create')
-@login_required
-def create():
-    return render_template('layout.html')
+# Removed in favour of creating submissions inside the details of the challenge
+# @submission.route('/create')
+# @login_required
+# def create():
+#     """
+#
+#     """
+#     return render_template('layout.html')

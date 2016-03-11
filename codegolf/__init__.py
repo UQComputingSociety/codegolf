@@ -7,6 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///codegolf.db'
 app.config['GITHUB_CONSUMER_KEY'] = os.environ['CODEGOLF_GITHUB_CONSUMER_KEY']
 app.config['GITHUB_CONSUMER_SECRET'] = os.environ['CODEGOLF_GITHUB_CONSUMER_SECRET']
 app.config['SECRET_KEY'] = os.environ['CODEGOLF_SECRET_KEY']
+app.testing = False
 
 login_manager = LoginManager()
 login_manager.init_app(app)

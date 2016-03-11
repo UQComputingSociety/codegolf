@@ -23,7 +23,7 @@ This is a repository for the website for the codegolf puzzles at UQCS.
 
 * SQLLite
 
-* The three environment variables from the codegolf channel in slack. Ask someone for them.
+* The three environment variables for the Github Oauth (more details below)
 
 ## Developement Guide
 
@@ -71,3 +71,6 @@ Its then the devs reponsability to setup these enviroment variables
 * 'CODEGOLF_GITHUB_CONSUMER_KEY' which is the github client id
 * 'CODEGOLF_GITHUB_CONSUMER_SECRET' which is the github client secret
 * 'CODEGOLF_SECRET_KEY' which is a random selection of characters
+
+Also, when developing locally you need to set `app.testing = True`, make sure it is `False` when committing to Github. 
+This value is able to be set inside `codegolf/__init__.py`
